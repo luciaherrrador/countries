@@ -1,0 +1,31 @@
+@import "../../colors";
+.searchContainer {
+  position: relative;
+  width: 30%;
+
+  .search {
+    padding: 18px 50px;
+    border: 0;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $white;
+    &:focus {
+      outline: none;
+    }
+  }
+  .darkBg {
+    background-color: $dark-blue;
+    color: $white;
+  }
+  i {
+    position: absolute !important;
+    top: 18px;
+    left: 10px;
+  }
+}
+@media only screen and(max-width:600px) {
+  .searchContainer {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

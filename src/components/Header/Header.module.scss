@@ -1,0 +1,51 @@
+@import "../../colors";
+
+@mixin flexible($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.headerWrapper {
+  background-color: $white;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  .container {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    @include flexible(row, space-between, center);
+    & span:first-child {
+      font-size: 18px;
+      font-weight: 800;
+    }
+    & span:nth-child(2) {
+      cursor: pointer;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.darkHeader {
+  background-color: $dark-blue;
+  color: #ffffff;
+}
+
+@media only screen and(max-width:600px) {
+  .container {
+    & span:first-child {
+      font-size: 14px !important;
+      font-weight: 800 !important;
+    }
+    & span:nth-child(2) {
+      font-size: 14px !important;
+    }
+  }
+}

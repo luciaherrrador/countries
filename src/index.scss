@@ -1,0 +1,30 @@
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.dark-theme {
+  background-color: $dark-bg;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.light-theme {
+  background-color: $light-bg;
+  height: 100%;
+  min-height: 100vh;
+}
